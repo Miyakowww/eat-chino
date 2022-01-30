@@ -146,19 +146,16 @@ function restart() {
 }
 
 function setMove(pos) {
-    let top = pos * 15.384615384615385 - 23.07692307692308;
-    rowContainer.style.top = `${top}%`;
+    rowContainer.style.top = `${pos * 15.384615384615385 - 23.07692307692308}%`;
 }
 
 // move other chino when the first chino is eaten
 let move = 1;
 setInterval(() => {
-    if (move >= next) {
-        return;
-    }
+    if (move >= next) return;
 
     move += 0.125;
-    while (move >= 2) {
+    if (move >= 2) {
         // take the bottom row
         const row = rows.shift();
         row.remove();
