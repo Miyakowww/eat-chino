@@ -203,12 +203,12 @@ body {
 }
 
 .cell-chino {
-    background-image: url(/img/chino.png);
+    background-image: url(../img/chino.png);
     background-size: cover;
 }
 
 .cell-tapped {
-    background-image: url(/img/flower_t.png);
+    background-image: url(../img/flower_t.png);
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
