@@ -13,6 +13,8 @@ window.onresize = () => {
 };
 window.onresize();
 
+document.querySelectorAll('.remove-this').forEach(e => e.remove());
+
 // create rows
 const rowContainer = frame.querySelector('.row-container');
 const rowTemplate = rowContainer.querySelector('.row-template');
