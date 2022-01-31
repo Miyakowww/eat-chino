@@ -1,6 +1,6 @@
 <h1 align="center">
 <a href="https://miyakowww.github.io/eat-chino">
-    <img src="./img/chino.png" width="100" height="100" alt="chino">
+    <img src="./img/chino.png" width="100" height="100" alt="chino" style="image-rendering: pixelated;">
 </a>
 
 吃掉小智乃
@@ -8,13 +8,13 @@
 
 简体中文 | [English](./README_en.md)
 
+开始玩：[GitHub Pages](https://miyakowww.github.io/eat-chino/)
+
 <br>
 
 ## 简介
 创意来源：[EatKano](https://github.com/arcxingye/EatKano)  
-
-[官方网站](https://gochiusa.com/bloom/)
-| [GitHub Pages](https://miyakowww.github.io/eat-chino/)
+素材提供：L_L_S_K_
 
 因为不会 PHP 所以用原生 Web 重新实现了一遍
 

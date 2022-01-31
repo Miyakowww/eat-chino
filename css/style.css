@@ -205,6 +205,12 @@ body {
 .cell-chino {
     background-image: url(../img/chino.png);
     background-size: cover;
+    background-position: center;
+    image-rendering: pixelated;
+}
+
+.cell-chino-d {
+    background-image: url(../img/chino_d.png) !important;
 }
 
 .cell-tapped {
@@ -218,9 +224,11 @@ body {
     0% {
         background-color: #e7a;
     }
+
     50% {
         background-color: #fbd;
     }
+
     100% {
         background-color: #e7a;
     }
