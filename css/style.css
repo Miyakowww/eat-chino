@@ -118,7 +118,7 @@ body {
     z-index: 1;
 }
 
-.cover-content {
+.cover-contents {
     width: 100%;
     height: 100%;
     position: relative;
@@ -135,8 +135,20 @@ body {
     opacity: 0.4;
 }
 
+.cover-content {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    color: #fff;
+}
+
+.game-title {
+    font-size: 200%;
+}
+
 .game-btn {
     background-color: #c8d;
+    margin-top: 40px;
     padding: 15px 30px;
     border-radius: 100px;
     cursor: pointer;
@@ -152,25 +164,10 @@ body {
     line-height: 1;
 }
 
-.game-over {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    color: #fff;
-}
-
-.game-over-title {
-    padding-bottom: 10px;
-    font-size: 200%;
-}
-
 .game-over-score {
+    margin-top: 10px;
     font-size: 150%;
     color: #bff;
-}
-
-.game-over-score-text {
-    padding-bottom: 40px;
 }
 
 .row-container {
