@@ -32,7 +32,7 @@ const gameStartFrame = cover.querySelector('.game-start');
 const gameOverFrame = cover.querySelector('.game-over');
 const gameOverScore = gameOverFrame.querySelector('.game-over-score');
 
-let arr;
+let arr = [];
 let next = 1;
 let score = 0;
 let onGame = false;
@@ -51,7 +51,10 @@ initArr();
 
 // place chino on the board
 function refreshDisplay() {
-    rowContainer.querySelectorAll('.cell-chino-d').forEach(c => c.classList.remove('cell-chino-d'));
+    rowContainer
+        .querySelectorAll('.cell-chino-d')
+        .forEach(c => c.classList.remove('cell-chino-d'));
+
     arr.forEach((v, i) => {
         for (let j = 0; j < 4; j++) {
             const c = rows[i].children[j];
@@ -118,7 +121,10 @@ function gameStart() {
 // game over and show score
 function gameOver() {
     onGame = false;
-    rowContainer.querySelectorAll('.cell-chino').forEach(c => c.classList.add('cell-chino-d'));
+    rowContainer
+        .querySelectorAll('.cell-chino')
+        .forEach(c => c.classList.add('cell-chino-d'));
+
     setTimeout(() => {
         gameOverScore.innerText = score;
         cover.classList.remove('hidden');
