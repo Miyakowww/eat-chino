@@ -13,7 +13,32 @@ window.onresize = () => {
 };
 window.onresize();
 
-document.querySelectorAll('.remove-this').forEach(e => e.remove());
+document.querySelectorAll('.preload').forEach(e => e.remove());
+
+// prepare sound effects
+const seNames = [
+    './se/co.mp3',
+    './se/coa.mp3',
+    './se/san.mp3'
+];
+const sePlayer = new Audio();
+let seIndex = 0;
+
+function playSE() {
+    sePlayer.pause();
+    sePlayer.src = seNames[seIndex];
+    sePlayer.currentTime = 0;
+    sePlayer.play();
+    seIndex = (seIndex + 1) % seNames.length;
+}
+
+function playGameOverSE() {
+    sePlayer.pause();
+    sePlayer.src = './se/gameover.mp3';
+    sePlayer.currentTime = 0;
+    sePlayer.play();
+    seIndex = 0;
+}
 
 // create rows
 const rowContainer = frame.querySelector('.row-container');
@@ -84,6 +109,7 @@ function clickCell(i) {
         next++;
         score++;
         firstTap = false;
+        playSE();
     }
     else if (!firstTap) {
         // wrong
@@ -121,6 +147,8 @@ function gameStart() {
 // game over and show score
 function gameOver() {
     onGame = false;
+    playGameOverSE();
+
     rowContainer
         .querySelectorAll('.cell-chino')
         .forEach(c => c.classList.add('cell-chino-d'));
